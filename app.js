@@ -50,5 +50,13 @@ let getMovie = ()=>{
             })
     }
 };
+        
 searchBtn.addEventListener('click',getMovie);
+
+movieNameRef.addEventListener('keydown',(hit)=>{
+    
+    if(hit.key=="Enter"){
+        getMovie()
+    }
+})
 window.addEventListener('load',getMovie);
